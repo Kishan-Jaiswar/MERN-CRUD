@@ -4,12 +4,12 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: "./", // ✅ Ensures correct base path for Vercel deployment
+  base: "/",  // ✅ Ensure correct base path for Vercel
   build: {
-    outDir: "dist", // ✅ Ensures Vite outputs to the correct folder
+    outDir: "dist",   // ✅ Vite will build into the "dist" folder
     emptyOutDir: true,
   },
   server: {
-    port: 5173, // ✅ Ensure it runs on the same port during local development
-  },
+    port: 5173
+  }
 });

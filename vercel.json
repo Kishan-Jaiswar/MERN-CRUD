@@ -8,10 +8,7 @@
     {
       "src": "frontend/package.json",
       "use": "@vercel/static-build",
-      "config": {
-        "distDir": "frontend/dist",
-        "maxDuration": 60
-      }
+      "config": { "distDir": "frontend/dist" }
     }
   ],
   "routes": [
@@ -21,7 +18,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "frontend/dist/$1"
+      "dest": "/frontend/dist/index.html"
     }
   ]
 }

@@ -1,6 +1,5 @@
 import { ChangeEvent, Dispatch, FormEvent, SetStateAction } from "react";
 import { CreateUser, FormStatus, TableStatus, User } from "../types/types";
-import { useNavigate } from "react-router-dom";
 
 export const capitalizeFirstLetter = (string: String) =>
   string

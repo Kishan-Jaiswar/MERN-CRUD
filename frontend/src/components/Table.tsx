@@ -55,7 +55,7 @@ const Table: React.FC = () => {
           <div className="flex">
             <button
               className="md:w-auto bg-blue-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-600 transition"
-              onClick={(e) => handleAddUserClick(setOpenForm, setFormData)}
+              onClick={() => handleAddUserClick(setOpenForm, setFormData)}
             >
               Add User
             </button>
@@ -173,7 +173,7 @@ const Table: React.FC = () => {
                     ? "bg-blue-200"
                     : "bg-blue-500 hover:bg-blue-600 transition"
                 } text-white px-6 py-3 rounded-lg shadow-lg`}
-                onClick={(e) =>
+                onClick={() =>
                   setTableStatus((prev) => ({ ...prev, page: prev?.page + 1 }))
                 }
                 disabled={users?.length < 10}

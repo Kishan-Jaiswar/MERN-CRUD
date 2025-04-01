@@ -6,21 +6,15 @@
       "use": "@vercel/node"
     },
     {
-      "src": "frontend/index.html",
-      "use": "@vercel/static",
-      "config": {
-        "distDir": "frontend/dist"
-      }
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "frontend/dist" }
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/backend/api/index.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/frontend/index.html"
+      "dest": "backend/api/index.js"
     }
   ]
 }
